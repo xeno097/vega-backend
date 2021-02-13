@@ -1,17 +1,17 @@
-import { Request, Response, NextFunction } from "express";
-import { BaseError } from "../common/classes/base-error.abstract";
-import { IResponsePayload } from "../common/interfaces/response-payload.interface";
+import { Request, Response, NextFunction } from 'express';
+import { BaseError } from '../common/classes/base-error.abstract';
+import { IResponsePayload } from '../common/interfaces/response-payload.interface';
 
 export const errorHandlerMiddleware = (
   err: Error,
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const response: IResponsePayload = {
     ok: false,
     data: {},
-    errors: [{ message: "An error occured" }],
+    errors: [{ message: 'An error occured' }],
   };
 
   if (err instanceof BaseError) {

@@ -1,4 +1,4 @@
-import { IErrorPayload } from "./error-payload.interface";
+import { IErrorPayload } from './error-payload.interface';
 
 export interface IResponsePayload {
   ok: boolean;

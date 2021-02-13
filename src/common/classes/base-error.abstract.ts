@@ -1,4 +1,4 @@
-import { IErrorPayload } from "../interfaces/error-payload.interface";
+import { IErrorPayload } from '../interfaces/error-payload.interface';
 
 export abstract class BaseError extends Error {
   abstract statusCode: number;
