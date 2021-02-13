@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  vega-backend:
+    container_name: "vega-backend"
+    restart: "always"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - postgres-database
+    ports:
+      - "4000:3000"
+
+  postgres-database:
+    container_name: "postgres-database"
+    restart: "always"
+    image: postgres
+    ports:
+      - "5000:5432"
+    env_file: .docker-compose.env

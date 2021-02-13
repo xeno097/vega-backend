@@ -15,12 +15,13 @@
       "./src/test/setup.test.ts"
     ]
   },
-  "author": "xeno097",
+  "author": "xeno097 & Bujosa",
   "license": "ISC",
   "dependencies": {
     "@types/cookie-session": "^2.0.42",
     "@types/express": "^4.17.11",
     "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "socket.io": "^3.1.1",
