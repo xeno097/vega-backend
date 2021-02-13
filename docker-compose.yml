@@ -13,10 +13,9 @@ services:
       - "4000:3000"
 
   postgres-database:
-    container_name: "postgres-databse"
+    container_name: "postgres-database"
     restart: "always"
     image: postgres
     ports:
       - "5000:5432"
-    environment:
-      POSTGRES_PASSWORD: example
+    env_file: .docker-compose.env
