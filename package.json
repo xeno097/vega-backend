@@ -15,7 +15,7 @@
       "./src/test/setup.test.ts"
     ]
   },
-  "author": "xeno097",
+  "author": "xeno097 & Bujosa",
   "license": "ISC",
   "dependencies": {
     "@types/cookie-session": "^2.0.42",
