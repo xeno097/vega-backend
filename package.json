@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "ts-node-dev --poll src/index.ts",
     "start": "tsc && node dist/index.js",
+    "db:init": "ts-node src/knex/init.ts",
     "test": "jest --watchAll --no-cache"
   },
   "jest": {

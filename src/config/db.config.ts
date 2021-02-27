@@ -1,10 +1,17 @@
 import { Config } from 'knex';
 
-const configureKnexPgConnection = (): Config => {
+const configKnexPgConnection = (): Config => {
   return {
     client: 'pg',
     connection: process.env.POSTGRES_URI,
   };
 };
 
-export { configureKnexPgConnection };
+const configKnexPgScriptConnection = (): Config => {
+  return {
+    client: 'pg',
+    connection: process.env.POSTGRES_LOCALHOST_URI,
+  };
+};
+
+export { configKnexPgConnection, configKnexPgScriptConnection };
