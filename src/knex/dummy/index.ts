@@ -10,12 +10,10 @@ const createDummyTable = async () => {
     return;
   }
 
-  await knexClient.connection.schema.createTable('dummy', (table) => {
+  await knexClient.connection.schema.createTable(dummyTableName, (table) => {
     table.increments('id');
     table.string('name');
   });
-
-  const result = await knexClient.connection('dummy');
 
   console.log('Table Dummy created successfully');
 };
