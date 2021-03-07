@@ -7,6 +7,13 @@ const configKnexPgConnection = (): Config => {
   };
 };
 
+const configKnexTestPgConnection = (): Config => {
+  return {
+    client: 'pg',
+    connection: process.env.POSTGRES_TEST_DB_URI,
+  };
+};
+
 const configKnexPgScriptConnection = (): Config => {
   return {
     client: 'pg',
@@ -14,4 +21,8 @@ const configKnexPgScriptConnection = (): Config => {
   };
 };
 
-export { configKnexPgConnection, configKnexPgScriptConnection };
+export {
+  configKnexPgConnection,
+  configKnexPgScriptConnection,
+  configKnexTestPgConnection,
+};
