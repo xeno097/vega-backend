@@ -1,6 +1,17 @@
-version: "3"
+version: '3'
 
 services:
   vega-backend:
     volumes:
       - ./:/usr/src/app
+
+  pg-test-db:
+    container_name: 'pg-test-db'
+    restart: 'always'
+    image: postgres
+    ports:
+      - '5001:5432'
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_USER: test
+      POSTGRES_DB: vegadb-test
